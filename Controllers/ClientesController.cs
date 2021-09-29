@@ -27,7 +27,8 @@ namespace web_api_empresa.Controllers{
             if (ModelState.IsValid){
              dbConexion.Clientes.Add(clientes);
              await dbConexion.SaveChangesAsync();
-             return Ok(clientes);
+             return Ok();
+             //return Ok(clientes); retorna el registro ingresado
              //return Created("api/clientes",clientes); retorna los registros
              }else{
                  return BadRequest();
